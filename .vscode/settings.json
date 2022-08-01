@@ -2,6 +2,7 @@
     "files.associations": {
         "type_traits": "cpp",
         "iostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "queue": "cpp"
     }
 }
