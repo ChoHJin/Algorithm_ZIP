@@ -3,6 +3,12 @@
         "type_traits": "cpp",
         "iostream": "cpp",
         "iosfwd": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "__config": "cpp",
+        "__hash_table": "cpp",
+        "__locale": "cpp",
+        "__string": "cpp",
+        "tuple": "cpp",
+        "version": "cpp"
     }
 }
