@@ -9,6 +9,8 @@
         "__locale": "cpp",
         "__string": "cpp",
         "tuple": "cpp",
-        "version": "cpp"
+        "version": "cpp",
+        "__tree": "cpp",
+        "map": "cpp"
     }
 }
