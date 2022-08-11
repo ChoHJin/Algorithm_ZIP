@@ -12,6 +12,7 @@
         "version": "cpp",
         "__tree": "cpp",
         "map": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "initializer_list": "cpp"
     }
 }
