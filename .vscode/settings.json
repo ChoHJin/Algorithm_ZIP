@@ -13,6 +13,7 @@
         "__tree": "cpp",
         "map": "cpp",
         "string": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "vector": "cpp"
     }
 }
