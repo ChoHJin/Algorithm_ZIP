@@ -16,6 +16,7 @@
         "initializer_list": "cpp",
         "vector": "cpp",
         "ios": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "stack": "cpp"
     }
 }
