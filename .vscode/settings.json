@@ -17,6 +17,7 @@
         "vector": "cpp",
         "ios": "cpp",
         "ostream": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "algorithm": "cpp"
     }
 }
