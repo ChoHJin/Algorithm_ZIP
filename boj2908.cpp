@@ -1,30 +1,30 @@
 // #include <iostream>
-// #include <queue>
 // #include <algorithm>
+// #include <string>
 
 // using namespace std;
 
-// queue<int> q;
+// int comp(int a, int b) {
+//     return a > b ? a : b;
+// }
 
 // int main() {
 //     ios_base::sync_with_stdio(false);
 //     cin.tie(NULL);
 
-//     int  n;
+//     string a, b;
 
-//     cin >> n;
+//     cin >> a >> b;
 
-//     for(int i = 1; i <= n; i++) {
-//         q.push(i);
-//     }
+//     reverse(a.begin(), a.end());
+//     reverse(b.begin(), b.end());
 
-//     while(q.size() != 1) {
-//         q.pop();
-//         q.push(q.front());
-//         q.pop();
-//     }
-    
-//     cout << q.front() << endl;
+//     int x, y;
+
+//     x = stoi(a);
+//     y = stoi(b);
+
+//     cout << comp(x, y) << endl;
 
 //     return 0;
 // }
