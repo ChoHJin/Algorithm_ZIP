@@ -1,36 +1,36 @@
-#include <iostream>
+// #include <iostream>
 
-using namespace std;
+// using namespace std;
 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+// int main() {
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(NULL);
 
-    int n;
-    int tmp = 0, ans = 0;
-    string s;
+//     int n;
+//     int tmp = 0, ans = 0;
+//     string s;
 
-    cin >> n;
+//     cin >> n;
 
-    for(int i = 0; i < n; i++) {
-        cin >> s;
+//     for(int i = 0; i < n; i++) {
+//         cin >> s;
 
-        for(int j = 0; j < s.length(); j++) {
-            if(s[j] == 'O') {
-                tmp++;
-                ans += tmp;
+//         for(int j = 0; j < s.length(); j++) {
+//             if(s[j] == 'O') {
+//                 tmp++;
+//                 ans += tmp;
                 
-            }
-            else if(s[j] == 'X') {
-                tmp = 0;
-            }
-        }
+//             }
+//             else if(s[j] == 'X') {
+//                 tmp = 0;
+//             }
+//         }
 
-        cout << ans << endl;
+//         cout << ans << endl;
         
-        tmp = 0;
-        ans = 0;
-    }
+//         tmp = 0;
+//         ans = 0;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
