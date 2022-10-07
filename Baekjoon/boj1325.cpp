@@ -1,117 +1,117 @@
-#include <iostream>
-#include <vector>
-#include <cstring>
-#include <queue>
-#include <algorithm>
+// #include <iostream>
+// #include <vector>
+// #include <cstring>
+// #include <queue>
+// #include <algorithm>
 
-using namespace std;
+// using namespace std;
 
-int n, m;
-vector<int> com[10001];
-bool visited[10001];
-int cnt;
+// int n, m;
+// vector<int> com[10001];
+// bool visited[10001];
+// int cnt;
 
 
-// queue<int> q;
-// vector<pair<int, int>> v;
-// int cnt = 1;
+// // queue<int> q;
+// // vector<pair<int, int>> v;
+// // int cnt = 1;
 
-void dfs(int x) {
-    visited[x] = true;
-    cnt++;
-
-    for(int i = 0; i < com[x].size(); i++) {
-        if(!visited[com[x][i]]) {
-            dfs(com[x][i]);
-        }
-    }
-    
-}
-
-// 시간테스트용 bfs 
-// void bfs(int x) {
+// void dfs(int x) {
 //     visited[x] = true;
-//     q.push(x);
+//     cnt++;
 
-//     while(!q.empty()) {
-//         x = q.front();
-//         q.pop();
-
-//         for(int i = 0; i < com[x].size(); i++) {
-//             int next = com[x][i];
-
-//             if(!visited[next]) {
-//                 visited[next] = true;
-//                 q.push(next);
-//                 cnt++;
-//             }
+//     for(int i = 0; i < com[x].size(); i++) {
+//         if(!visited[com[x][i]]) {
+//             dfs(com[x][i]);
 //         }
 //     }
+    
 // }
 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+// // 시간테스트용 bfs 
+// // void bfs(int x) {
+// //     visited[x] = true;
+// //     q.push(x);
 
-    vector<int> ans;
-    int tmp = 0;
+// //     while(!q.empty()) {
+// //         x = q.front();
+// //         q.pop();
 
-    cin >> n >> m;
+// //         for(int i = 0; i < com[x].size(); i++) {
+// //             int next = com[x][i];
 
-    for(int i = 0; i < m; i++) {
-        int a, b;
+// //             if(!visited[next]) {
+// //                 visited[next] = true;
+// //                 q.push(next);
+// //                 cnt++;
+// //             }
+// //         }
+// //     }
+// // }
 
-        cin >> a >> b;
+// int main() {
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(NULL);
 
-        com[b].push_back(a);    //b를 해킹하면 a를 해킹할 수 있기 때문에 b에 a를 넣음
-    }
+//     vector<int> ans;
+//     int tmp = 0;
 
-    for(int i = 1; i <= n; i++) {
-        memset(visited, false, sizeof(visited));
-        cnt = 0;
-        dfs(i);
+//     cin >> n >> m;
 
-        if(tmp < cnt) {
-            tmp = cnt;
-            ans.clear();
-            ans.push_back(i);
-        }
-        else if(tmp == cnt) {
-            ans.push_back(i);
-        }
-    }
+//     for(int i = 0; i < m; i++) {
+//         int a, b;
 
-    sort(ans.begin(), ans.end());
+//         cin >> a >> b;
 
-    for(int i = 0; i < ans.size(); i++) {
-        cout << ans[i] << " ";
-    }
+//         com[b].push_back(a);    //b를 해킹하면 a를 해킹할 수 있기 때문에 b에 a를 넣음
+//     }
 
+//     for(int i = 1; i <= n; i++) {
+//         memset(visited, false, sizeof(visited));
+//         cnt = 0;
+//         dfs(i);
 
-    //bfs 코드
+//         if(tmp < cnt) {
+//             tmp = cnt;
+//             ans.clear();
+//             ans.push_back(i);
+//         }
+//         else if(tmp == cnt) {
+//             ans.push_back(i);
+//         }
+//     }
 
-    // for(int i = 1; i <= n; i++) {
-    //     bfs(i);
-    //     memset(visited, false, sizeof(visited));
-    //     v.push_back(make_pair(i, cnt));
-    //     cnt = 1;
-    // }
+//     sort(ans.begin(), ans.end());
 
-    // int maxCnt = -1;
-    // for(int i = 0; i < v.size(); i++) {
-    //     if(v[i].second > maxCnt) {
-    //         maxCnt = v[i].second;
-    //     }
-    // }
-
-    // for(int i = 0; i < v.size(); i++) {
-    //     if(v[i].second == maxCnt) {
-    //         cout << v[i].first << " ";
-    //     }
-    // }
+//     for(int i = 0; i < ans.size(); i++) {
+//         cout << ans[i] << " ";
+//     }
 
 
-    cout << endl;
+//     //bfs 코드
 
-    return 0;
-}
+//     // for(int i = 1; i <= n; i++) {
+//     //     bfs(i);
+//     //     memset(visited, false, sizeof(visited));
+//     //     v.push_back(make_pair(i, cnt));
+//     //     cnt = 1;
+//     // }
+
+//     // int maxCnt = -1;
+//     // for(int i = 0; i < v.size(); i++) {
+//     //     if(v[i].second > maxCnt) {
+//     //         maxCnt = v[i].second;
+//     //     }
+//     // }
+
+//     // for(int i = 0; i < v.size(); i++) {
+//     //     if(v[i].second == maxCnt) {
+//     //         cout << v[i].first << " ";
+//     //     }
+//     // }
+
+
+//     cout << endl;
+
+//     return 0;
+// }
