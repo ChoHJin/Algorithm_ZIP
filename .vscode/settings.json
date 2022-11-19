@@ -21,6 +21,7 @@
         "algorithm": "cpp",
         "istream": "cpp",
         "string_view": "cpp",
-        "__bit_reference": "cpp"
+        "__bit_reference": "cpp",
+        "cmath": "cpp"
     }
 }
