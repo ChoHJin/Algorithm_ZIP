@@ -1,5 +1,3 @@
-// package com.tutorials.test2
-
 // import java.math.BigInteger
 
 // fun factorial(n: Int): BigInteger {
