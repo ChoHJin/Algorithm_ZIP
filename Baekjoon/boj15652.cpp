@@ -15,8 +15,8 @@
 //         return;
 //     }
 
-//     for(int i = idx; i < n; i++) {
-//         v.push_back(i + 1);
+//     for(int i = idx; i <= n; i++) {
+//         v.push_back(i);
 //         bt(i, cnt + 1);
 //         v.pop_back();
 //     }
@@ -29,7 +29,7 @@
 
 //     cin >> n >> m;
 
-//     bt(0, 0);
+//     bt(1, 0);
 
 //     return 0;
 // }
