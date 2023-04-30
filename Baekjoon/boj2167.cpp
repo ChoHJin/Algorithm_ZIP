@@ -1,45 +1,33 @@
 // #include <iostream>
+// #include <vector>
 
 // using namespace std;
-
-// int arr1[101][101], arr2[101][101];
-// int ans[101][101];
 
 // int main() {
 //     ios_base::sync_with_stdio(false);
 //     cin.tie(NULL);
 
-//     int n, m ,k;
-
+//     int n, m;
 //     cin >> n >> m;
 
-//     for(int i = 0; i < n; i++) {
-//         for(int j = 0; j < m; j++) {
-//             cin >> arr1[i][j];
+//     vector<vector<int>> arr(n + 1, vector<int>(m + 1, 0));
+
+//     for (int i = 1; i <= n; i++) {
+//         for (int j = 1; j <= m; j++) {
+//             cin >> arr[i][j];
+//             arr[i][j] += arr[i - 1][j] + arr[i][j - 1] - arr[i - 1][j - 1];
 //         }
 //     }
 
-//     cin >> m >> k;
+//     int k;
+//     cin >> k;
 
-//     for(int i = 0; i < m; i++) {
-//         for(int j = 0; j < k; j++) {
-//             cin >> arr2[i][j];
-//         }
-//     }
+//     for (int i = 0; i < k; i++) {
+//         int y1, x1, y2, x2;
+//         cin >> y1 >> x1 >> y2 >> x2;
 
-//     for(int i = 0; i < n; i++) {
-//         for(int j = 0; j < k; j++) {
-//             for(int l = 0; l < m; l++) {
-//                 ans[i][j] += (arr1[i][l] * arr2[l][j]);
-//             }
-//         }
-//     }
-
-//     for(int i = 0; i < n; i++) {
-//         for(int j = 0; j < k; j++) {
-//             cout << ans[i][j] << " ";
-//         }
-//         cout << endl;
+//         int ans = arr[y2][x2] - arr[y2][x1 - 1] - arr[y1 - 1][x2] + arr[y1 - 1][x1 - 1];
+//         cout << ans << '\n';
 //     }
 
 //     return 0;
