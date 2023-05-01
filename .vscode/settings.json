@@ -22,6 +22,8 @@
         "istream": "cpp",
         "string_view": "cpp",
         "__bit_reference": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "regex": "cpp",
+        "locale": "cpp"
     }
 }
