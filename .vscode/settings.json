@@ -24,7 +24,8 @@
         "__bit_reference": "cpp",
         "cmath": "cpp",
         "regex": "cpp",
-        "locale": "cpp"
+        "locale": "cpp",
+        "set": "cpp"
     },
     "java.compile.nullAnalysis.mode": "automatic"
 }
