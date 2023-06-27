@@ -3,20 +3,22 @@
 
 // using namespace std;
 
+// //부모를 찾는 함수
 // int findSet(vector<int>& parent, int x) {
 //     if(parent[x] == x) {
-//         return x;
+//         return x;   //x가 루트 노드인 경우
 //     }
     
-//     return parent[x] = findSet(parent, parent[x]);
+//     return parent[x] = findSet(parent, parent[x]);  //경로 압축
 // }
 
+// //두 집합을 합치는 함수
 // void unionSet(vector<int>& parent, int x, int y) {
 //     int rx = findSet(parent, x);
 //     int ry = findSet(parent, y);
 
 //     if(rx != ry) {
-//         parent[ry] = rx;
+//         parent[ry] = rx;    //y의 루트를 x의 루트로 설정
 //     }
 // }
 
