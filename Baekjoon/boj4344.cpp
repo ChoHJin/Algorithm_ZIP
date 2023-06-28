@@ -11,14 +11,14 @@
 
 //     int c, n;
 //     int num;
-//     int avg;
+//     double avg;
 
 //     cin >> c;
     
 //     for(int i = 0; i < c; i++) {
 //         cin >> n;
 
-//         avg = 0;
+//         avg = 0.0;
 //         num = 0;
 
 //         for(int j = 0; j < n; j++) {
