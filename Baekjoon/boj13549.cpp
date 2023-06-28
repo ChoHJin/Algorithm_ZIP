@@ -1,55 +1,57 @@
 // #include <iostream>
-// #include <deque>
-
-// #define MAX 100001
+// #include <queue>
+// #include <vector>
 
 // using namespace std;
 
-// deque<pair<int, int>> dq;
-// bool visited[MAX];
+// const int MAX = 100000;
 
-// int n, k;
+// int bfs01(int n, int k) {
+//     vector<int> visited(MAX + 1, -1);
 
-// int bfs01(int n) {
-//     dq.push_back(make_pair(n, 0));
-//     visited[n] = true;
+//     queue<int> q;
+//     q.push(n);
+//     visited[n] = 0;
 
-//     while(!dq.empty()) {
-//         int x = dq.front().first;
-//         int cnt = dq.front().second;
+//     while (!q.empty()) {
+//         int current = q.front();
+//         q.pop();
 
-//         dq.pop_front();
-
-//         if(x == k) {    //수빈이가 동생을 찾았으면 cnt 리턴
-//             return cnt;
+//         if (current == k) {
+//             break;
 //         }
 
-//         //순간이동하는데 걸리는 시간이 없으므로 순간이동을 먼저 할 수 있도록함.
-//         if(x * 2 < MAX && !visited[x * 2]) {
-//             dq.push_front(make_pair(x * 2, cnt));   //순간이동하는데 걸리는 시간 0초
-//             visited[x * 2] = true;
+//         // 2배로 이동하는 경우
+//         if (current * 2 <= MAX && visited[current * 2] == -1) {
+//             q.push(current * 2);
+//             visited[current * 2] = visited[current];
 //         }
 
-//         if(x + 1 < MAX && !visited[x + 1]) {
-//             dq.push_back(make_pair(x + 1, cnt + 1));
-//             visited[x + 1] = true;
+//         // -1로 이동하는 경우
+//         if (current - 1 >= 0 && visited[current - 1] == -1) {
+//             q.push(current - 1);
+//             visited[current - 1] = visited[current] + 1;
 //         }
-
-//         if(x - 1 >= 0 && !visited[x - 1]) {
-//             dq.push_back(make_pair(x - 1, cnt + 1));
-//             visited[x - 1] = true;
+        
+//         // +1로 이동하는 경우
+//         if (current + 1 <= MAX && visited[current + 1] == -1) {
+//             q.push(current + 1);
+//             visited[current + 1] = visited[current] + 1;
 //         }
 //     }
-//     return 0;
+
+//     return visited[k];
 // }
 
 // int main() {
 //     ios_base::sync_with_stdio(false);
 //     cin.tie(NULL);
 
+//     int n, k;
 //     cin >> n >> k;
 
-//     cout << bfs01(n) << endl;
+//     int result = bfs01(n, k);
+//     cout << result << endl;
 
 //     return 0;
 // }
