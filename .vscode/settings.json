@@ -25,7 +25,8 @@
         "cmath": "cpp",
         "regex": "cpp",
         "locale": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "unordered_set": "cpp"
     },
     "java.compile.nullAnalysis.mode": "automatic"
 }
