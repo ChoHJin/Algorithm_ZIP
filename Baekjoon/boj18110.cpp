@@ -10,7 +10,6 @@
 //     cin.tie(NULL);
 
 //     int n;
-
 //     cin >> n;
 
 //     if(n == 0) {
@@ -19,8 +18,6 @@
 //     }
 
 //     vector<int> v(n);
-//     int ans = 0;
-//     double sum = 0;
 
 //     for(int i = 0; i < n; i++) {
 //         cin >> v[i];
@@ -28,16 +25,16 @@
 
 //     sort(v.begin(), v.end());
 
-//     int cnt = ceil(n * 0.15);
-//     cnt = min(cnt, n / 2);
-//     v.erase(v.begin(), v.begin() + cnt);
-//     v.erase(v.end() - cnt, v.end());
+//     int cnt = round((float)(n * 3) / 20);
 
-//     for(int i : v) {
-//         sum += i;
+//     int ans = 0;
+//     double sum = 0;
+
+//     for(int i = cnt; i + cnt < n; i++) {
+//         sum += v[i];
 //     }
 
-//     ans = round(sum / v.size());
+//     ans = round((float)sum / (n - cnt * 2));
 
 //     cout << ans << endl;    
 
