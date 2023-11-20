@@ -1,16 +1,16 @@
-#include <iostream>
-#include <algorithm>
+// #include <iostream>
+// #include <algorithm>
 
-using namespace std;
+// using namespace std;
 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+// int main() {
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(NULL);
 
-    int n, m, k;
-    cin >> n >> m >> k;
+//     int n, m, k;
+//     cin >> n >> m >> k;
 
-    cout << min(m, k) + min(n - m, n - k) << endl;
+//     cout << min(m, k) + min(n - m, n - k) << endl;
 
-    return 0;
-}
+//     return 0;
+// }
